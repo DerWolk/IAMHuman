@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "io.freefair.lombok" version "5.0.0-rc4"
+}
+
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.passay:passay:1.2.0'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testImplementation 'org.assertj:assertj-core:3.15.0'
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.5'
+
+    testRuntimeOnly 'org.mockito:mockito-core:3.3.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+}
+
+
+application {
+    mainClassName = 'de.bitfull.iamh.App'
+}
+
+test {
+    useJUnitPlatform()
+}
