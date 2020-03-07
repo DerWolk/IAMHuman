@@ -18,7 +18,7 @@ public class HumanType {
 
     public enum ActionType{
         TYPE("TYPE"),
-        TYPE_RANDOM_PW("TYPE_RANDOM_PW");
+        SELECT("SELECT");
 
         private String type;
 

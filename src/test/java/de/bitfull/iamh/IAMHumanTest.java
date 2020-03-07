@@ -26,16 +26,19 @@ public class IAMHumanTest {
 
         HumanInput humanInput = HumanUtils.readJson("src/test/resources/input.json");
         assertThat(humanInput).isNotNull().hasNoNullFieldsOrProperties();
-        assertThat(humanInput.getActions())
-                .extracting(a -> a.getValue())
-                .contains(">>randompw(8)");
 
-        String function = ">>randompw(8)";
         IAMHuman mockedHuman = mock(IAMHuman.class);
         PowerMockito.whenNew(IAMHuman.class).withAnyArguments().thenReturn(mockedHuman);
+
+        String function = ">>randompw(8)";
         when(mockedHuman.checkFunction(function)).thenCallRealMethod();
         String generatedPW = mockedHuman.checkFunction(function);
         assertThat(generatedPW).doesNotContain(">>").doesNotContain(")");
         assertThat(generatedPW.length()).isEqualTo(8);
+
+        function = ">>randomnumber(1-10)";
+        when(mockedHuman.checkFunction(function)).thenCallRealMethod();
+        String generatedNumber = mockedHuman.checkFunction(function);
+        assertThat(Integer.parseInt(generatedNumber)).isBetween(1,10);
     }
 }

@@ -35,7 +35,7 @@ public class App {
     private Supplier newFirefox(boolean jsEnabled) {
         return (Supplier<Object>) () -> {
             FirefoxOptions options = new FirefoxOptions();
-            options.addPreference("javascript.enabled", false);
+            options.addPreference("javascript.enabled", jsEnabled);
             //options.addPreference("network.proxy.type", 1);
             //options.addPreference("network.proxy.socks", "192.168.178.51");
             //options.addPreference("network.proxy.socks_port", 1080);

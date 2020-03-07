@@ -2,29 +2,40 @@
   "targetUrl": "https://m.facebook.com/reg/",
   "actions": [
     {
-      "selectType":"XPATH",
-      "selector":"//*[@name=\"firstname\"]",
-      "action":"TYPE",
-      "value":"Ruediger"
+      "selectType": "XPATH",
+      "selector": "//*[@name=\"firstname\"]",
+      "action": "TYPE",
+      "value": "Ruediger"
     },
     {
-      "selectType":"XPATH",
-      "selector":"//*[@name=\"lastname\"]",
-      "action":"TYPE",
-      "value":"Schmalfuss"
+      "selectType": "XPATH",
+      "selector": "//*[@name=\"lastname\"]",
+      "action": "TYPE",
+      "value": "Schmalfuss"
     },
     {
-      "selectType":"XPATH",
-      "selector":"//*[@name=\"reg_email__\"]",
-      "action":"TYPE",
-      "value":"reudiger.ruediger@test.com"
+      "selectType": "XPATH",
+      "selector": "//*[@name=\"reg_email__\"]",
+      "action": "TYPE",
+      "value": "reudiger.ruediger@test.com"
     },
     {
-      "selectType":"XPATH",
-      "selector":"//*[@name=\"reg_passwd__\"]",
-      "action":"TYPE",
-      "value":">>randompw(8)"
+      "selectType": "XPATH",
+      "selector": "//*[@name=\"birthday_day\"]",
+      "action": "SELECT",
+      "value": ">>randomnumber(1-28)"
+    },
+    {
+      "selectType": "XPATH",
+      "selector": "//*[@name=\"birthday_year\"]",
+      "action": "SELECT",
+      "value": ">>randomnumber(1960-2000)"
+    },
+    {
+      "selectType": "XPATH",
+      "selector": "//*[@name=\"reg_passwd__\"]",
+      "action": "TYPE",
+      "value": ">>randompw(8)"
     }
-
   ]
 }

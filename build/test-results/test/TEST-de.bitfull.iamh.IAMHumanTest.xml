@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.bitfull.iamh.IAMHumanTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-07T15:01:23" hostname="Waldemars-MacBook-Pro-2.local" time="0.51">
-  <properties/>
-  <testcase name="parsing()" classname="de.bitfull.iamh.IAMHumanTest" time="0.51"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
