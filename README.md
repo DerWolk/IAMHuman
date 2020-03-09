@@ -7,6 +7,8 @@ IAMHuman is basically a Selenium wrapper with an extended and simplified JSON co
 A given JSON input file will be parsed to corresponding Selenium commands.
 
 e.g.:  
+
+```json
 {  
   "targetUrl": "<targetURL>",  
   "actions": [  
@@ -18,6 +20,7 @@ e.g.:
     }  
   ]  
 }  
+```
 
 A list of all possible commands will follow.
 
