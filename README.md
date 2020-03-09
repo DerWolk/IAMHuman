@@ -8,19 +8,19 @@ A given JSON input file will be parsed to corresponding Selenium commands.
 
 e.g.:  
 
-<pre>json
+<pre><code>
 {  
   "targetUrl": ">targetURL<",  
   "actions": [  
     {  
-      "selectType": "XPATH", **// Type of selector**  
-      "selector": "//*[@name=\"firstname\"]", **// Selector content**  
-      "action": "TYPE",  **// Action type e.g.: TYPE means the targeted element will receive a keyboard input** 
-      "value": "Ruediger"  **// Value for key input. Also possible: randompw(>pw length<) or randomnumber(>from<->to<)**
+      "selectType": "XPATH", <b>// Type of selector</b>  
+      "selector": "//*[@name=\"firstname\"]", <b>// Selector content</b>  
+      "action": "TYPE",  <b>// Action type e.g.: TYPE means the targeted element will receive a keyboard input</b> 
+      "value": "Ruediger"  <b>// Value for key input. Also possible: randompw(>pw length<) or randomnumber(>from<->to<)</b>
     }  
   ]  
 }  
-<\pre>
+    </code></pre>
 
 A list of all possible commands will follow.
 
